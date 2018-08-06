@@ -5,7 +5,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <modelVersion>4.0.0</modelVersion>
 <groupId>com.ravi.cal</groupId>
 <artifactId>RaviCalculator</artifactId>
-<version>1.0.1-SNAPSHOT</version>
+<version>1.0</version>
 <packaging>jar</packaging>
 <name>RaviCalculator</name>
 <url>http://maven.apache.org</url>
@@ -24,6 +24,19 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+<distributionManagement>
+<repository>
+<id>releaseRepo</id>
+<name>releaseRepo</name>
+<url>http://35.190.168.232:8081/nexus/content/repositories/releaseRepo</url>
+</repository>
+<snapshotRepository>
+<id>snapshotRepo</id>
+<name>snapshotRepo</name>
+<url>http://35.190.168.232:8081/nexus/content/repositories/snapshotRepo</url>
+</snapshotRepository>
+</distributionManagement>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -72,5 +85,6 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
       </plugins>
     </pluginManagement>
   </build>
+
 </project>
 
